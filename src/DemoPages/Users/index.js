@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 // Tables
 
-import UsersTable from './UsersTable/';
+import UsersTable from './UsersTable';
 
 
 // Layout

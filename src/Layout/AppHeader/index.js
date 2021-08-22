@@ -38,7 +38,7 @@ class Header extends React.Component {
                             <SearchBox/>
                         </div>
                         <div className="col-lg-4 app-header-center">
-                            <h6>Messages Dashboard</h6>
+                            <h6>Ikizamini Dashboard</h6>
                         </div>
                         <div className="col-lg-4 app-header-right">
 

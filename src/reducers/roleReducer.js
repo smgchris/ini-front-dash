@@ -13,7 +13,7 @@ export default function(state=initiateState,action){
             return{
                 
                ...state,
-               items:action.payload ,
+               items:action.payload.OBJECT ,
                errors:null
             }
         case FETCH_ROLES_ERROR:

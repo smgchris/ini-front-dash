@@ -18,7 +18,7 @@ const DefaultPage = ({ match }) => (
             <div className="login-container">
                 <div className="logo">
                     {/* <img src={Logo} alt="La Corniche" /> */}
-                    <b>SHIS Dashboard</b>
+                    <b>IKIZAMINI Dashboard</b>
                 </div>
                 <div className="">
 

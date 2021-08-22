@@ -114,6 +114,18 @@ export const ChartsNav = [
 export const MainNav = [
     {
         icon: 'pe-7s-users',
+        label: 'Customers',
+        content: [
+            {
+                label: 'Manage Customers',
+                to: '#/customers/manage-customers',
+            }
+        ]
+
+
+    },
+    {
+        icon: 'pe-7s-users',
         label: 'Users',
         content: [
             {
@@ -128,51 +140,20 @@ export const MainNav = [
 
 
     },
-    {
-        icon: 'pe-7s-speaker',
-        label: 'Messages',
-        content: [
-            {
-                label: 'My Messages',
-                to: '#/messages/',
-            },
-            {
-                label: 'Waiting My Approval',
-                to: '#/messages/to-approve', 
-            },
-            {
-                label: 'Add New Message',
-                to: '#/messages/add-new-message', 
-            }
-        ]
-
-
-    },
-    {
-        icon: 'pe-7s-share',
-        label: 'Shared Messages',
-        to: '#/messages/shared-messages/',
-    },
-    {
-        icon: 'pe-7s-paper-plane',
-        label: 'Posts',
-        content: [
-            {
-                label: 'My Posts',
-                to: '#/posts/my-posts/',
-            },
-            {
-                label: 'Add New Post',
-                to: '#/posts/my-posts/add-new-post', 
-            }
-        ]
-
-
-    },
+   
     {
         icon: 'pe-7s-chat',
-        label: 'Feedback',
-        to: '#/feedback/received/',
+        label: 'Payments',
+        content:[
+            {
+                label:'Send Money',
+                to:'#/payments/send-money'
+            },
+            {
+                label:'Transactions History',
+                to:'#/payments/history'
+            }
+        ],
     },
     {
         icon: 'pe-7s-settings',

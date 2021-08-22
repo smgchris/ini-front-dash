@@ -28,7 +28,7 @@ class AddItemForm extends React.Component {
 
     onSubmit(e) {
         e.preventDefault();
-        var user = JSON.parse(localStorage.getItem('user'));
+        //var user = JSON.parse(localStorage.getItem('user'));
         
         const product = {
             // name: this.state.name,
@@ -47,7 +47,7 @@ class AddItemForm extends React.Component {
         this.props.createRequest()
     }
     render() {
-        var user = JSON.parse(localStorage.getItem('user'));
+       // var user = JSON.parse(localStorage.getItem('user'));
         return (
 
             <Fragment>

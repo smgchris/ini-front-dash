@@ -7,9 +7,7 @@ import {
 
 
 function handleResponse(response) {
-    console.log(response)
     return response.text().then(text => {
-        console.log(text)
         const data = text && JSON.parse(text);
         if (!response.ok) {
             if (response.status === 401) {
@@ -32,7 +30,6 @@ export const fetchRequestsSuccess = (token) => {
     }
 }
 export function login(unique_username, password) {
-    console.log("using fetch");
     const requestOptions = {
         method: 'POST',
         headers: { 
@@ -43,7 +40,7 @@ export function login(unique_username, password) {
          },
         body: JSON.stringify({ unique_username, password })
     };
-    fetch('https://lacorniche.rw/api/login.php', requestOptions)
+    fetch('http://localhost:8080/auth', requestOptions)
     .then(res => res.json())
         .then(token => { console.log(token)
                 // dispatch(fetchProductsSuccess(token))

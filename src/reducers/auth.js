@@ -8,7 +8,7 @@ import {
 
 
 
-const user = JSON.parse(localStorage.getItem("user"));
+const user = localStorage.getItem("tkn");
 
 const initialState = user
   ? { isLoggedIn: true, user }
@@ -32,7 +32,7 @@ export default function (state = initialState, action) {
       return {
         ...state,
         isLoggedIn: true,
-        user: payload.user,
+        //user: payload.user,
       };
     case LOGIN_FAIL:
       return {
@@ -41,7 +41,7 @@ export default function (state = initialState, action) {
         user: null,
       };
     case LOGOUT:
-      localStorage.removeItem("user");
+      //localStorage.removeItem("jwt");
       return {
         ...state,
         isLoggedIn: false,

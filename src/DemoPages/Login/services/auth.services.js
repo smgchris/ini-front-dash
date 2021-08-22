@@ -17,19 +17,21 @@ class AuthService {
   // }
 
   login(username,password){
-    return fetch('https://lacorniche.rw/api/login.php', {
+    return fetch('http://localhost:8080/auth', {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
+             'Access-Control-Allow-Origin': '*',
+              'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,DELETE,PUT',
+             "Access-Control-Allow-Headers": "X-Requested-With,content-type"
         },
-        mode: 'cors',
         body: JSON.stringify({'username':username,
         'password':password})
     })
     .then(res => res.json())
     .then((response) => {
       if (response) {
-        localStorage.setItem("user", JSON.stringify(response));
+        localStorage.setItem("tkn", JSON.stringify(response.jwt));
       }
       return response;
     });

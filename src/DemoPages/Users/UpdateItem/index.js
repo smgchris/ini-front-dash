@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { connect } from 'react-redux';
+import { fetchDashUsers } from '../../../actions/userActions';
+
 
 import {
     Row, Col,
@@ -11,10 +13,36 @@ import {
 import AddUserForm from '../AddUser/AddUserForm'
 
 class UpdateItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            users:this.props.users
+        }
+    }
     
+    componentDidMount() {
+        const { fetchDashUsers} = this.props
+       
+        fetchDashUsers()
+    
+    
+    }
+
+    componentDidUpdate(prevProps){
+        
+        if (this.props.users !== prevProps.users) {
+            this.setState({
+              users: this.props.users,
+              
+            })
+          }
+    }
 
     render() {
-        const user=this.props.users.find(user=>user.user_id===this.props.match.params.id)
+        if(typeof this.state.users !== 'undefined' && this.state.users.length === 0)
+        return <div></div>
+
+        const user=this.state.users.find(user=>""+user.id===""+this.props.match.params.id)
         return (
             <Fragment>
             
@@ -43,7 +71,7 @@ class UpdateItem extends React.Component {
     }
 }
 const mapStateToProps = state => ({
-    users: state.users.items || [],
+    users: state.users.dashUsers || [],
   })
 
-export default connect(mapStateToProps, null)(UpdateItem);
+export default connect(mapStateToProps, {fetchDashUsers})(UpdateItem);

@@ -46,8 +46,7 @@ class UserBox extends React.Component {
     });
 
 logout(){
-    localStorage.removeItem("user");
-    console.log("auth.username");
+    localStorage.removeItem("tkn");
      log_out
      window.location.replace('#/login-page/login')
 // https://reactrouter.com/web/api/Redirect

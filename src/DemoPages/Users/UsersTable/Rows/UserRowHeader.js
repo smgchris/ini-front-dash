@@ -9,8 +9,9 @@ export default class UserRow extends React.Component {
       <tr>
         <th>#</th>
         <th>Name</th>
-        <th>Role</th>
-        <th>Email</th>
+        <th>Username</th>
+        <th>Balance</th>
+        <th>End of Subscription</th>
         <th>Action</th>
       </tr>
     </thead>

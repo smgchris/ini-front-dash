@@ -15,24 +15,45 @@ export const fetchRolesError = (data) => {
     }
 }
 
+var token = null
+if (localStorage.getItem('tkn') !== null)
+    token = localStorage.getItem('tkn').replace(/"/g, "")
+
 export const fetchRoles = () => dispatch => {
-    fetch('http://127.0.0.1:8000/get-permissions')
+
+    fetch('http://localhost:8080/p-roles', {
+        method: "POST",
+        headers: {
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'POST,GET,OPTIONS,DELETE,PUT',
+            "Access-Control-Allow-Headers": "X-Requested-With,content-type"
+        },
+    })
         .then(res => res.json())
-        .then(roles => {
-            dispatch(fetchRolesSuccess(roles))
-
-        }).catch((error) => {
-
+        .then(result => {
+            if (result.CODE == 200)
+                dispatch({
+                    type: FETCH_ROLES_SUCCESS,
+                    payload:result
+                })
+            else
+                dispatch({
+                    type: FETCH_ROLES_ERROR,
+                    payload: result
+                })
+        }
+        ).catch((error) => {
             const errorPayload = {};
 
-            errorPayload['message'] = error.response.data.message;
-            errorPayload['status'] = error.response.status;
+            dispatch({
+                type: FETCH_ROLES_ERROR,
+                payload: errorPayload
+            })
 
-            dispatch(fetchRolesError(errorPayload))
-
-        })
+        });
 };
-
 //-------------------Fetch ----------------
 export const fetchRoleUsersSuccess = (roleUsers) => {
     return {

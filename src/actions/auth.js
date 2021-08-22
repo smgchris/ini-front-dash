@@ -11,7 +11,7 @@ export const login = (username, password) => (dispatch) => {
     (data) => {
       dispatch({
         type: LOGIN_SUCCESS,
-        payload: { user: data },
+        payload: { jwt: data },
       });
 
       return Promise.resolve();
@@ -38,14 +38,10 @@ export const login = (username, password) => (dispatch) => {
   );
 };
 
-export const log_out  = (dispatch) => {
+export const log_out  = () => {
 
-  localStorage.removeItem("user");
-
-  dispatch({
-    type: LOGOUT,
-  });
-  window.location.reload();
+  localStorage.removeItem("tkn");
+  window.location.replace('#/login-page/login')
 };
 
 

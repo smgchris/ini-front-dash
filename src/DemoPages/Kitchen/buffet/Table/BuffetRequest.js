@@ -37,7 +37,7 @@ class AddItemForm extends React.Component {
 
     onSubmit(e) {
         e.preventDefault();
-        var user = JSON.parse(localStorage.getItem('user'));
+        //var user = JSON.parse(localStorage.getItem('user'));
 
         const product = {
             // "menu_id":"1", "waiter_id":"1","status":"1", "qty":"20","batch_id":"2"
@@ -60,7 +60,7 @@ class AddItemForm extends React.Component {
         this.props.buffetRequest()
     }
     render() {
-        var user = JSON.parse(localStorage.getItem('user'));
+        //var user = JSON.parse(localStorage.getItem('user'));
         return (
 
             <Fragment>

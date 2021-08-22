@@ -14,18 +14,17 @@ class Nav extends Component {
 
     render() {
 
-        const user = JSON.parse(localStorage.getItem('user'));
-      //  console.log(user);
+        //const jwt = JSON.parse(localStorage.getItem('tkn'));
+        console.log( localStorage.getItem('tkn'));
 
-        if (user === null) {
-            console.log("user is null");
+        if (localStorage.getItem('tkn') ==="undefined" || JSON.parse(localStorage.getItem('tkn')) === null) {
             window.location.replace("#/login-page/login")
             window.location.reload()
             // <Route exact path="/" render={() => (<Redirect to="/login-page/login" />)} />
             // <Redirect to="/login-page/login" />;
         }
         else {
-            const userId = user.role;
+           // const userId = user.role;
            // console.log(user);
             //console.log(userId);
 
