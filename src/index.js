@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 import { unregister } from './registerServiceWorker';
 
 import { HashRouter } from 'react-router-dom';
@@ -33,5 +33,5 @@ if (module.hot) {
 }
 unregister();
 
-// registerServiceWorker();
+registerServiceWorker();
 

@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "description": "Ikizamini Dashboard",
-  "author": "Team La Corniche: Songa",
+  "author": "Team Ikizamini.com",
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smgchris/lacorniche-front"
+    "url": "git+https://github.com/smgchris/ini-front-dash"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
