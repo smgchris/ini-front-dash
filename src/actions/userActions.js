@@ -89,7 +89,7 @@ export const fetchUser = (id) => dispatch => {
 
             dispatch({
                 type: 'fetchUserError',
-                payload: user
+                payload: error
             })
         })
 };
