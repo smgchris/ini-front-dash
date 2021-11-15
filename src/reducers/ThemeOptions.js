@@ -121,6 +121,7 @@ export default function reducer(state = {
     enableFixedFooter: true,
     enableFixedSidebar: true,
     colorScheme: 'white',
+    cdnSource:'https://d1yurxstr9hyp.cloudfront.net/',
     backgroundImage: sideBar6,
     backgroundImageOpacity: 'opacity-06',
     enablePageTitleIcon: true,

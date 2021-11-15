@@ -156,70 +156,26 @@ export const MainNav = [
         ],
     },
     {
+        icon: 'pe-7s-chat',
+        label: 'Study Materials',
+        content:[
+            {
+                label:'Add a Test',
+                to:'#/study/add-test'
+            },
+            {
+                label:'Manage Tests',
+                to:'#/study/tests'
+            }
+        ],
+    },
+    {
         icon: 'pe-7s-settings',
         label: 'Settings',
         to: '#/settings/account/',
     }
 ];
 
-export const StoreNav = [
-    {
-        icon: 'pe-7s-box1',
-        label: 'Stock Products',
-        to: '#/store/stock/manage-stock',
-    },
-    {
-        icon: 'pe-7s-ticket',
-        label: 'Requisitions',
-        to: '#/store/requests/manage-requests',
-    },
-    {
-        icon: 'pe-7s-network',
-        label: 'Department Stock',
-        to: '#/store/dept-stock',
-    },
-    {
-        icon: 'pe-7s-shopbag',
-        label: 'Products',
-        to: '#/store/products/manage-products',
-    },
-    {
-        icon: 'pe-7s-menu',
-        label: 'Product Categories',
-        to: '#/store/categories/manage-product-categories',
-    },
-
-
-
-];
-
-export const KitchenNav = [
-    {
-        icon: 'pe-7s-hourglass',
-        label: 'Requests',
-        to: '#/kitchen/manage-requests'
-    },
-    {
-        icon: 'pe-7s-more',
-        label: 'Buffet',
-        to: '#/kitchen/buffet'
-    },
-    {
-        icon: 'pe-7s-shopbag',
-        label: 'Kitchen Stock',
-        to: '#/kitchen/kitchen-stock'
-    },
-    {
-        icon: 'pe-7s-clock',
-        label: 'Client Orders',
-        to: '#/kitchen/front-end-orders'
-    },
-    // {
-    //     icon: 'pe-7s-graph2',
-    //     label: 'Summary',
-    //     to: '#/kitchen/summary'
-    // }
-]
 export const DashNav = [
     {
         icon: 'pe-7s-graph1',

@@ -22,7 +22,7 @@ const PaymentsDash = lazy(() => import('../../DemoPages/Payments'));
 const SettingsDash = lazy(() => import('../../DemoPages/SettingsDash'));
 const UserDash = lazy(() => import('../../DemoPages/Users'));
 const CustomerDash = lazy(() => import('../../DemoPages/Customers'));
-
+const StudyDash = lazy(() => import('../../DemoPages/Study'));
 
 const DefaultPage = lazy(() => import('../../DemoPages/Login'));
 
@@ -88,6 +88,17 @@ const AppMain = () => {
                 </div>
             }>
                 <Route path="/login-page" component={DefaultPage} />
+            </Suspense>
+            <Suspense fallback={
+                <div className="loader-container">
+                    <div className="loader-container-inner">
+                        <h6 className="mt-3">
+                            Please wait as we load Ikizamini
+                        </h6>
+                    </div>
+                </div>
+            }>
+                <Route path="/study" component={StudyDash} />
             </Suspense>
 
 

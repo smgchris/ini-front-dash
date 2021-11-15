@@ -16,6 +16,7 @@ import { LOGOUT } from '../actions/types'
 import messageReducer from './messageReducer';
 import postReducer from './postReducer';
 import pytReducer from './pytReducer';
+import studyReducer from './studyReducer';
 
  const appReducer=combineReducers({
     ThemeOptions,
@@ -37,13 +38,13 @@ import pytReducer from './pytReducer';
     messages:messageReducer,
     posts:postReducer,
 
-    pyts:pytReducer
+    pyts:pytReducer,
+    study:studyReducer
 });
 
 // reset the state of a redux store
 const rootReducer = (state, action) => {
 	if (action.type === LOGOUT) {
-		//localStorage.removeItem('user');
 		state = undefined;
 	}
 	return appReducer(state, action);

@@ -3,7 +3,8 @@ import {
     DELETE_USER_SUCCESS, DELETE_USER_ERROR
     , FETCH_USERS_SUCCESS, FETCH_USERS_ERROR, NEW_USER_SUCCESS, NEW_USER_ERROR, CREATING_USER
 } from './types';
-2
+const API_URL = "https://inibe.herokuapp.com/";
+
 //-------------------Fetch users----------------
 export const fetchUsersSuccess = (users, page) => {
     return {
@@ -26,7 +27,7 @@ if (localStorage.getItem('tkn') !== null)
 
 
 export const fetchUsers = (paging) => dispatch => {
-    fetch('http://localhost:8080/f-users', {
+    fetch(API_URL+'f-users', {
         method: "POST",
         headers: {
             'Authorization': 'Bearer ' + token,
@@ -59,7 +60,7 @@ export const fetchUsers = (paging) => dispatch => {
 };
 
 export const fetchUser = (id) => dispatch => {
-    fetch('http://localhost:8080/f-user', {
+    fetch(API_URL+'f-user', {
         method: "POST",
         headers: {
             'Authorization': 'Bearer ' + token,
@@ -96,7 +97,7 @@ export const fetchUser = (id) => dispatch => {
 
 export const fetchDashUsers = () => dispatch => {
 
-    fetch('http://localhost:8080/p-users', {
+    fetch(API_URL+'p-users', {
         method: "POST",
         headers: {
             'Authorization': 'Bearer ' + token,
@@ -143,7 +144,7 @@ export const creatingUser = () => {
 export const createUser = (user) => dispatch => {
     console.log(user)
 
-    fetch('http://localhost:8080/a-user', {
+    fetch(API_URL+'a-user', {
         method: "POST",
         headers: {
             'Authorization': 'Bearer ' + token,
@@ -184,7 +185,7 @@ export const createUser = (user) => dispatch => {
 
 export const updateUser = user => dispatch => {
 
-    fetch('http://localhost:8080/u-user', {
+    fetch(API_URL+'u-user', {
         method: "POST",
         headers: {
             'Authorization': 'Bearer ' + token,
@@ -225,7 +226,7 @@ export const updateUser = user => dispatch => {
 // Update customer
 export const updateCustomer = user => dispatch => {
 
-    fetch('http://localhost:8080/u-customer', {
+    fetch(API_URL+'u-customer', {
         method: "POST",
         headers: {
             'Authorization': 'Bearer ' + token,

@@ -53,7 +53,7 @@ class UserRow extends React.Component {
         <td>{trx.recipient}</td>
         <td>{trx.amount}</td>
         <td>{trx.trxCost}</td>
-        <td>{trx.initiator.firstName}</td>
+        <td>{trx.initiator?trx.initiator.firstName:''}</td>
         <td>{trx.reason}</td>
         <td>{status === "failed" ? trx.callbackMsg : ""}</td>
         <td>

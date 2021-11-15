@@ -4,7 +4,7 @@ import {
     GETALL_FAILURE,
 } from './types'
 
-
+const API_URL = "https://inibe.herokuapp.com/";
 
 function handleResponse(response) {
     return response.text().then(text => {
@@ -40,7 +40,7 @@ export function login(unique_username, password) {
          },
         body: JSON.stringify({ unique_username, password })
     };
-    fetch('http://localhost:8080/auth', requestOptions)
+    fetch(API_URL+'auth', requestOptions)
     .then(res => res.json())
         .then(token => { console.log(token)
                 // dispatch(fetchProductsSuccess(token))

@@ -1,5 +1,5 @@
 import { log_out } from "./auth";
-
+const API_URL = "https://inibe.herokuapp.com/";
 //-------------------Fetch transactions----------------
 
 var token = null;
@@ -7,7 +7,7 @@ if (localStorage.getItem("tkn") !== null)
   token = localStorage.getItem("tkn").replace(/"/g, "");
 
 export const fetchReceivedTrxs = () => (dispatch) => {
-  fetch("http://localhost:8080/get-received-transactions", {
+  fetch(API_URL+"get-received-transactions", {
     method: "POST",
     headers: {
       Authorization: "Bearer " + token,
@@ -45,7 +45,7 @@ export const fetchReceivedTrxs = () => (dispatch) => {
 //-------------------Fetch sent transactions----------------
 
 export const fetchSentTrxs = () => (dispatch) => {
-  fetch("http://localhost:8080/get-sent-transactions", {
+  fetch(API_URL+"get-sent-transactions", {
     method: "POST",
     headers: {
       Authorization: "Bearer " + token,
@@ -82,7 +82,7 @@ export const fetchSentTrxs = () => (dispatch) => {
 
 //send
 export const sendMoney = (sendDto) => (dispatch) => {
-  return fetch("http://localhost:8080/send-money", {
+  return fetch(API_URL+"send-money", {
     method: "POST",
     headers: {
       Authorization: "Bearer " + token,
@@ -116,7 +116,7 @@ export const sendMoney = (sendDto) => (dispatch) => {
 
 //check status
 export const checkTrxStatus = (ref) => (dispatch) => {
-  return fetch("http://localhost:8080/get-trx-status", {
+  return fetch(API_URL+"get-trx-status", {
     method: "POST",
     headers: {
       Authorization: "Bearer " + token,
@@ -149,7 +149,7 @@ export const checkTrxStatus = (ref) => (dispatch) => {
 
 //refresh balance
 export const refreshBalance = () => (dispatch) => {
-  fetch("http://localhost:8080/refresh-balance", {
+  fetch(API_URL+"refresh-balance", {
     method: "POST",
     headers: {
       Authorization: "Bearer " + token,

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://lacorniche.rw/api/login.php";
+const API_URL = "https://inibe.herokuapp.com/";
 
 class AuthService {
   // login(username, password) {
@@ -17,7 +17,7 @@ class AuthService {
   // }
 
   login(username,password){
-    return fetch('http://localhost:8080/auth', {
+    return fetch(API_URL+'auth', {
         method: 'POST',
         headers: {
             'content-type': 'application/json',

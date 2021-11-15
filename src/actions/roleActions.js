@@ -1,5 +1,6 @@
 import{FETCH_ROLES_ERROR,FETCH_ROLES_SUCCESS,FETCH_ROLE_USERS_ERROR,FETCH_ROLE_USERS_SUCCESS,NEW_ROLE_SUCCESS, NEW_ROLE_ERROR} from './types';
 
+const API_URL = "https://inibe.herokuapp.com/";
 //-------------------Fetch roles----------------
 export const fetchRolesSuccess = (roles) => {
     return {
@@ -21,7 +22,7 @@ if (localStorage.getItem('tkn') !== null)
 
 export const fetchRoles = () => dispatch => {
 
-    fetch('http://localhost:8080/p-roles', {
+    fetch(API_URL+'p-roles', {
         method: "POST",
         headers: {
             'Authorization': 'Bearer ' + token,
