@@ -4,7 +4,7 @@
   "private": true,
   "description": "Ikizamini Dashboard",
   "author": "Team Ikizamini.com",
-  "homepage": "",
+  "homepage": "dashboard.ikizamini.com/#/login-page/login",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/smgchris/ini-front-dash"
