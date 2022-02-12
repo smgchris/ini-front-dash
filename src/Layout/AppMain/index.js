@@ -4,22 +4,22 @@ import React, { Suspense, lazy, Fragment } from 'react';
 import { connect } from 'react-redux'
 
 import { ToastContainer } from 'react-toastify';
-import Departments from '../../DemoPages/Departments';
-import Roles from '../../DemoPages/Roles';
-import Suppliers from '../../DemoPages/Suppliers';
+// import Departments from '../../DemoPages/Departments';
+// import Roles from '../../DemoPages/Roles';
+// import Suppliers from '../../DemoPages/Suppliers';
 
-const Dashboards = lazy(() => import('../../DemoPages/Dashboards'));
+// const Dashboards = lazy(() => import('../../DemoPages/Dashboards'));
 
-const Widgets = lazy(() => import('../../DemoPages/Widgets'));
-const Elements = lazy(() => import('../../DemoPages/Elements'));
-const Components = lazy(() => import('../../DemoPages/Components'));
-const Charts = lazy(() => import('../../DemoPages/Charts'));
-const Forms = lazy(() => import('../../DemoPages/Forms'));
-const Tables = lazy(() => import('../../DemoPages/Tables'));
+// const Widgets = lazy(() => import('../../DemoPages/Widgets'));
+// const Elements = lazy(() => import('../../DemoPages/Elements'));
+// const Components = lazy(() => import('../../DemoPages/Components'));
+// const Charts = lazy(() => import('../../DemoPages/Charts'));
+// const Forms = lazy(() => import('../../DemoPages/Forms'));
+// const Tables = lazy(() => import('../../DemoPages/Tables'));
 
 
 const PaymentsDash = lazy(() => import('../../DemoPages/Payments'));
-const SettingsDash = lazy(() => import('../../DemoPages/SettingsDash'));
+// const SettingsDash = lazy(() => import('../../DemoPages/SettingsDash'));
 const UserDash = lazy(() => import('../../DemoPages/Users'));
 const CustomerDash = lazy(() => import('../../DemoPages/Customers'));
 const StudyDash = lazy(() => import('../../DemoPages/Study'));
@@ -67,17 +67,7 @@ const AppMain = () => {
             }>
                 <Route path="/payments" component={PaymentsDash} />
             </Suspense>
-            <Suspense fallback={
-                <div className="loader-container">
-                    <div className="loader-container-inner">
-                        <h6 className="mt-3">
-                            Please wait as we load Ikizamini
-                        </h6>
-                    </div>
-                </div>
-            }>
-                <Route path="/settings" component={SettingsDash} />
-            </Suspense>
+           
             <Suspense fallback={
                 <div className="loader-container">
                     <div className="loader-container-inner">

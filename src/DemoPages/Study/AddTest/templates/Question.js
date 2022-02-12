@@ -106,7 +106,7 @@ export class Question extends Component {
       });
     } else {
       this.setState({
-        [statusName]: "failed",
+        [status]: "failed",
       });
     }
   }

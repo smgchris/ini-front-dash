@@ -4,7 +4,6 @@ import {Route} from 'react-router-dom';
 // DASHBOARDS
 
 import BasicDashboard from './Basic/';
-import MainDashboard from './mainDashboard/Tables/ProductSummary'
 
 // Layout
 
