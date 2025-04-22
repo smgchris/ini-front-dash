@@ -1,7 +1,8 @@
 import { log_out } from "./auth";
 
 //-----------------------------------
-const API_URL = "https://inibe.herokuapp.com/";
+const API_URL = "https://inibe-cbc386fa9895.herokuapp.com/";
+
 var token = null;
 if (localStorage.getItem("tkn") !== null)
   token = localStorage.getItem("tkn").replace(/"/g, "");

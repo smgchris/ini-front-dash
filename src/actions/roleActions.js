@@ -1,6 +1,6 @@
 import{FETCH_ROLES_ERROR,FETCH_ROLES_SUCCESS,FETCH_ROLE_USERS_ERROR,FETCH_ROLE_USERS_SUCCESS,NEW_ROLE_SUCCESS, NEW_ROLE_ERROR} from './types';
 
-const API_URL = "https://inibe.herokuapp.com/";
+const API_URL = "https://inibe-cbc386fa9895.herokuapp.com/";
 //-------------------Fetch roles----------------
 export const fetchRolesSuccess = (roles) => {
     return {

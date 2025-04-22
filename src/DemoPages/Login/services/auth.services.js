@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://inibe.herokuapp.com/";
+const API_URL = "https://inibe-cbc386fa9895.herokuapp.com/";
 
 class AuthService {
   // login(username, password) {

@@ -4,7 +4,8 @@ import {
     GETALL_FAILURE,
 } from './types'
 
-const API_URL = "https://inibe.herokuapp.com/";
+const API_URL = "https://inibe-cbc386fa9895.herokuapp.com/";
+
 
 function handleResponse(response) {
     return response.text().then(text => {

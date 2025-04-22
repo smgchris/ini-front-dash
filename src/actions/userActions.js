@@ -3,7 +3,7 @@ import {
     DELETE_USER_SUCCESS, DELETE_USER_ERROR
     , FETCH_USERS_SUCCESS, FETCH_USERS_ERROR, NEW_USER_SUCCESS, NEW_USER_ERROR, CREATING_USER
 } from './types';
-const API_URL = "https://inibe.herokuapp.com/";
+const API_URL = "https://inibe-cbc386fa9895.herokuapp.com/";
 
 //-------------------Fetch users----------------
 export const fetchUsersSuccess = (users, page) => {
