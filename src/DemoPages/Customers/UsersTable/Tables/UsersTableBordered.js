@@ -98,14 +98,17 @@ class UsersTableBordered extends React.Component {
     ))
 
     if (searchTerm !== '') {
-      userItems = fetchedUsers.map((user, index) => {
-        if (user.username.includes(searchTerm) || (user.firstName !== null && user.firstName.toLowerCase().includes(searchTerm.toLowerCase()))) {
-          return <UserRow key={user.user_id} user={user} index={index} />
-        }
-      })
-      // if(userItems.length==0){
-
-      // }
+      const lowerSearch = searchTerm.toLowerCase();
+    
+      const filteredUsers = fetchedUsers.filter(user =>
+        (user.username && user.username.toLowerCase().includes(lowerSearch)) ||
+        (user.firstName && user.firstName.toLowerCase().includes(lowerSearch))
+      );
+    
+      userItems = filteredUsers.map((user, index) => (
+        <UserRow key={user.user_id} user={user} index={index} />
+      ));
+    
     }
 
 
