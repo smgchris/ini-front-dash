@@ -45,18 +45,21 @@ class UsersTableBordered extends React.Component {
 
   render() {
     const { searchTerm } = this.state
-    const{dashUsers}=this.props
-    let userItems = dashUsers.map((user, index) => (
-      <UserRow key={user.user_id} user={user} index={index} />
-    ))
+const { dashUsers } = this.props
 
-    if (searchTerm !== '') {
-      userItems = dashUsers.map((user, index) => {
-        if (user.username.includes(searchTerm) || (user.firstName !== null && user.firstName.toLowerCase().includes(searchTerm.toLowerCase()))) {
-          return <UserRow key={user.user_id} user={user} index={index} />
-        }
-      })
-    }
+let filteredUsers = dashUsers
+
+if (searchTerm !== '') {
+  filteredUsers = dashUsers.filter(user =>
+    (user.username && user.username.toLowerCase().includes(searchTerm.toLowerCase())) ||
+    (user.firstName && user.firstName.toLowerCase().includes(searchTerm.toLowerCase()))
+  )
+}
+
+const userItems = filteredUsers.map((user, index) => (
+  <UserRow key={user.user_id} user={user} index={index} />
+))
+
 
     return (
       <Fragment>
