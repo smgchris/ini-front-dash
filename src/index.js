@@ -26,8 +26,8 @@ const renderApp = Component => {
 
 renderApp(Main);
 if (module.hot) {
-  module.hot.accept('./DemoPages/Main', () => {
-    const NextApp = require('./DemoPages/Main').default;
+  module.hot.accept('./DemoPages/Users', () => {
+    const NextApp = require('./DemoPages/Users').default;
     renderApp(NextApp);
   });
 }
