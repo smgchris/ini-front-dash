@@ -164,7 +164,6 @@ class LoginForm extends Component {
                 </FormGroup>
               </div>
             </div>
-
           </Form>
         </div>
         {loggingIn}

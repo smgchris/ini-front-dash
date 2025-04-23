@@ -6,7 +6,6 @@ import { unregister } from './registerServiceWorker';
 import { HashRouter } from 'react-router-dom';
 import './assets/base.css';
 import Main from './DemoPages/Main';
-import Users from './DemoPages/Users';
 import configureStore from './config/configureStore';
 import store from './config/store'
 import { Provider } from 'react-redux';
@@ -25,10 +24,10 @@ const renderApp = Component => {
   );
 };
 
-renderApp(Users);
+renderApp(Main);
 if (module.hot) {
-  module.hot.accept('./DemoPages/Users', () => {
-    const NextApp = require('./DemoPages/Users').default;
+  module.hot.accept('./DemoPages/Main', () => {
+    const NextApp = require('./DemoPages/Main').default;
     renderApp(NextApp);
   });
 }
